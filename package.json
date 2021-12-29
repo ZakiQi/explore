@@ -8,6 +8,26 @@
     "lint": "vue-cli-service lint",
     "prepare": "husky install"
   },
+
+
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "prettier --write ./src",
+      "eslint --fix .src"
+    ]
+  },
+
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
