@@ -1,7 +1,6 @@
 module.exports = {
   // 一行最多 100 字符
   printWidth: 150,
-  trailingComma: 'all',
   // 缩进
   tabWidth: 2,
   // 末尾分号
