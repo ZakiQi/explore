@@ -1,5 +1,3 @@
-// !如果 extends 配置的是一个数组，那么最终会将所有规则项进行合并，出现冲突的时候，后面的会覆盖前面的;
-// !通过 rules 单独配置的规则优先级比 extends 高;
 module.exports = {
   root: true,
   env: {
@@ -7,32 +5,14 @@ module.exports = {
     browser: true,
     es6: true
   },
-  // todo:了解parser 以及 parserOptions的作用
   parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: 'babel-eslint', // 仅当用了 Flow 或 尚在实验中的特性等不被 Eslint 支持的，可以增加 `babel-eslint`
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
-  extends: [
-    // ! eslint官方推荐的规则
-    'eslint:recommended',
-    // ! eslint-plugin-vue vue 官方eslint插件，针对一些vue提出建议 部分可以修复
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:vue/essential', 'eslint:recommended'],
   plugins: ['vue'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-var': 2,
-    'no-unused-vars': 0,
-    eqeqeq: process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto'
-      }
-    ],
     // ! 可以这样配置eslint-plugin-vue里面的规则
     'vue/no-unused-components': 0,
     'vue/singleline-html-element-content-newline': 0,
@@ -56,6 +36,20 @@ module.exports = {
           allowFirstLine: false
         }
       }
-    ]
+    ],
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-var': 2,
+    eqeqeq: ['error', 'always', { null: 'ignore' }], // 要求使用 === 和 !==
+    'no-redeclare': 'error', // 禁止多次声明同一变量
+    'no-label-var': 'error', // 禁用与变量同名的标签
+    'no-unused-vars': 'error', // 禁止出现未使用过的变量
+    'no-use-before-define': 'error', // 禁止在变量定义之前使用它们
+
+    semi: ['error', 'never'], // 要求或禁止使用分号代替 ASI ["always" (默认) 要求在语句末尾使用分号, "never" 不允许分号作为语句的末尾（不包括那些为了消除歧义以 [，(，/，+，或 - 开头的语句）],
+    'semi-spacing': ['error', { before: false, after: true }], // 强制分号之前和之后使用一致的空格
+    'array-bracket-spacing': ['error', 'never'], // 强制数组方括号中使用一致的空格
+    'comma-dangle': ['error', 'never'], // 要求或禁止末尾逗号 [never,禁止]
+    indent: ['error', 2] // 缩进
   }
 }
