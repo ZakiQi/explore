@@ -64,7 +64,9 @@
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "eslint --fix"
+      "prettier --write",
+      "vue-cli-service lint",
+      "git add"
     ]
   }
 }
