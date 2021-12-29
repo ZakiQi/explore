@@ -1,56 +1,61 @@
-/**
- * eslint rules  参考admin-element-ui
- * http://eslint.cn/docs/user-guide/configuring#configuring-rules
- * http://eslint.cn/docs/rules/
- * ● 基本使用方式
- * "off" 或者0 关闭规则
- * "warn" 或者1 将规则打开为警告（不影响退出代码）
- * "error" 或者2 将规则打开为错误（触发时退出代码为1）
- * 如：'no-restricted-syntax': 0, // 表示关闭该规则
- * ● 如果某项规则，有额外的选项，可以通过数组进行传递，而数组的第一位必须是错误级别。如0,1,2
- * 如 'semi': ['error', 'never'], never就是额外的配置项
- * ● 也可直接用别人的：
- * 如->饿了么：https://github.com/ElemeFE/eslint-config-elemefe
- * 如->VUE：https://github.com/vuejs/eslint-config-vue
- */
+// !如果 extends 配置的是一个数组，那么最终会将所有规则项进行合并，出现冲突的时候，后面的会覆盖前面的;
+// !通过 rules 单独配置的规则优先级比 extends 高;
 module.exports = {
   root: true,
   env: {
-    browser: true,
     node: true,
+    browser: true,
     es6: true
   },
-  extends: [
-    // 'elemefe',
-    'plugin:vue/essential',
-    'eslint:recommended'
-  ],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'error',
-    eqeqeq: ['error', 'always', { null: 'ignore' }], // 要求使用 === 和 !==
-    'no-redeclare': 'error', // 禁止多次声明同一变量
-    'no-label-var': 'error', // 禁用与变量同名的标签
-    'no-unused-vars': 'error', // 禁止出现未使用过的变量
-    'no-use-before-define': 'error', // 禁止在变量定义之前使用它们
-
-    // Stylistic Issues
-    semi: ['error', 'never'], // 要求或禁止使用分号代替 ASI ["always" (默认) 要求在语句末尾使用分号, "never" 不允许分号作为语句的末尾（不包括那些为了消除歧义以 [，(，/，+，或 - 开头的语句）],
-    'semi-spacing': ['error', { before: false, after: true }], // 强制分号之前和之后使用一致的空格
-    'array-bracket-spacing': ['error', 'never'], // 强制数组方括号中使用一致的空格
-    'comma-dangle': ['error', 'never'], // 要求或禁止末尾逗号 [never,禁止]
-    // quotes: [1, 'single'],
-    indent: ['error', 2] // 缩进
-  },
+  // todo:了解parser 以及 parserOptions的作用
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint', // 仅当用了 Flow 或 尚在实验中的特性等不被 Eslint 支持的，可以增加 `babel-eslint`
+    sourceType: 'module'
   },
-  overrides: [
-    {
-      files: ['**/__tests__/*.{j,t}s?(x)'],
-      env: {
-        mocha: true
+  extends: [
+    // ! eslint官方推荐的规则
+    'eslint:recommended',
+    // ! eslint-plugin-vue vue 官方eslint插件，针对一些vue提出建议 部分可以修复
+    'plugin:vue/recommended',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['vue'],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-var': 2,
+    'no-unused-vars': 0,
+    eqeqeq: process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
       }
-    }
-  ]
+    ],
+    // ! 可以这样配置eslint-plugin-vue里面的规则
+    'vue/no-unused-components': 0,
+    'vue/singleline-html-element-content-newline': 0,
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        singleline: 'never',
+        multiline: 'always'
+      }
+    ],
+    'vue/v-bind-style': ['error', 'shorthand'],
+    'vue/v-on-style': ['error', 'shorthand'],
+    'vue/prop-name-casing': ['error', 'camelCase'],
+    'vue/require-default-prop': 0,
+    'vue/max-attributes-per-line': [
+      2,
+      {
+        singleline: 10,
+        multiline: {
+          max: 1,
+          allowFirstLine: false
+        }
+      }
+    ]
+  }
 }

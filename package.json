@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "staging": "vue-cli-service build --mode staging",
+    "prepare": "husky install"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -56,17 +58,13 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "npx --no-install commitlint --edit $1"
     }
   },
   "lint-staged": {
-    "{src}/**/*.{js,vue}": [
-      "eslint --fix --ext .js,.vue",
-      "git add"
-    ],
-    "store/*.{js,vue}": [
-      "eslint --fix --ext .js,.vue",
-      "git add"
+    "*.{js,vue}": [
+      "eslint --fix"
     ]
   }
 }

@@ -10,6 +10,7 @@ module.exports = {
   jsxBracketSameLine: false,
   trailingComma: 'none',
   arrowParens: 'always',
+  htmlWhitespaceSensitivity: 'ignore',
   extends: [
     //继承 vue 的标准特性
     'plugin:vue/essential',
