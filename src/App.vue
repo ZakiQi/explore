@@ -7,9 +7,6 @@
 
 
 
-
-
-
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
@@ -24,10 +21,12 @@ export default {
 
 
 
-      b: 2
-    }
-  }
-}
+      
+
+      b: 2,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
