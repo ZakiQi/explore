@@ -15,10 +15,21 @@ export default {
     return {
       a: 1,
 
-      b: 2,
-    };
-  },
-};
+
+
+
+
+
+
+
+
+
+
+
+      b: 2
+    }
+  }
+}
 </script>
 
 <style lang="scss">
