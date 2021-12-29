@@ -5,17 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "prepare": "husky install",
-    "pretty-quick": "pretty-quick --staged"
-  },
-  "pre-commit": [
-    "pretty-quick"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -63,5 +53,20 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src}/**/*.{js,vue}": [
+      "eslint --fix --ext .js,.vue",
+      "git add"
+    ],
+    "store/*.{js,vue}": [
+      "eslint --fix --ext .js,.vue",
+      "git add"
+    ]
+  }
 }
