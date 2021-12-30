@@ -24,17 +24,17 @@ module.exports = {
   // override the messages, defaults are as follows
   messages: {
     type: '选择一种你的提交类型:',
-    scope: '选择一个scope (可选):'
+    // scope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替',
     // used if allowCustomScopes is true
-    // customScope: 'Denote the SCOPE of this change:',
-    // subject: '短说明:\n',
-    // body: '长说明，使用"|"换行(可选)：\n',
-    // breaking: '非兼容性说明 (可选):\n',
-    // footer: '关联关闭的issue，例如：#31, #34(可选):\n',
-    // confirmCommit: '确定提交说明?'
-  }
-  // allowCustomScopes: false,
-  // allowBreakingChanges: ['特性', '修复'],
+    customScope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替',
+    subject: '短说明:\n',
+    body: '长说明，使用"|"换行(可选)：\n',
+    breaking: '非兼容性说明 (可选):\n',
+    footer: '关联关闭的issue，例如：#31, #34(可选):\n',
+    confirmCommit: '确定提交说明?'
+  },
+  allowCustomScopes: false,
+  allowBreakingChanges: ['特性', '修复'],
   // limit subject length
-  // subjectLimit: 100
+  subjectLimit: 100
 }
