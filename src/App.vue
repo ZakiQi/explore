@@ -27,7 +27,7 @@ export default {
 }
 
 #nav {
-  padding: 3px;
+  padding: 3888px;
 
   a {
     color: #2c3e50;
