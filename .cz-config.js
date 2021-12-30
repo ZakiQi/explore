@@ -39,8 +39,8 @@ module.exports = {
     // scope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替: \n',
     // 如果allowcustomscope为true
     customScope: '此次提交的影响范围,如数据层、视图层等,多个可以用 * 代替:\n',
-    subject: '短说明:\n',
-    body: '长说明，使用"|"换行(可选)：\n',
+    subject: '标题:\n',
+    body: '说明，使用"|"换行(可选)：\n',
     breaking: '非兼容性说明 (可选):\n',
     footer: '关联的禅道上任务，例如：#31, #34(可选):\n',
     confirmCommit: '确定提交说明?'
