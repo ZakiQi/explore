@@ -28,7 +28,7 @@ module.exports = {
     { value: '🔧工具', name: '工具:    开发工具变动(构建、脚手架工具等)' },
     { value: '⏪回滚', name: '回滚:    代码回退' }
   ],
-  // scopes: [{ name: '模块1' }, { name: '模块2' }, { name: '模块3' }, { name: '模块4' }],
+  scopes: [{ name: '模块1' }, { name: '模块2' }, { name: '模块3' }, { name: '模块4' }],
   // 它需要匹配字段类型的值。如。:“修复”
   /*  scopeOverrides: {
     fix: [
@@ -50,7 +50,7 @@ module.exports = {
     footer: '关联关闭的issue，例如：#31, #34(可选):\n',
     confirmCommit: '确定提交说明?'
   },
-  allowCustomScopes: true,
+  allowCustomScopes: false,
   allowBreakingChanges: ['特性', '修复'],
   // 限制主题长度
   subjectLimit: 100
