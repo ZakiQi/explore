@@ -3066,9 +3066,9 @@
     "q" "^1.5.1"
 
 "conventional-changelog-conventionalcommits@^4.3.1":
-  "integrity" "sha512-fo+VhM0VtD3wdHZtrPhgvTFjAhAMUjYeQV6B5+DB/cupG1O554pJdTwrvBInq8JLHl+GucKQpZycMPye/OpgSw=="
-  "resolved" "https://registry.npmjs.org/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-4.6.2.tgz"
-  "version" "4.6.2"
+  "integrity" "sha512-LTTQV4fwOM4oLPad317V/QNQ1FY4Hju5qeBIM1uTHbrnCE+Eg4CdRZ3gO2pUeR+tzWdp80M2j3qFFEDWVqOV4g=="
+  "resolved" "https://registry.npmjs.org/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-4.6.3.tgz"
+  "version" "4.6.3"
   dependencies:
     "compare-func" "^2.0.0"
     "lodash" "^4.17.15"
@@ -3080,9 +3080,9 @@
   "version" "3.0.0"
 
 "conventional-commits-parser@^3.2.2":
-  "integrity" "sha512-YyRDR7On9H07ICFpRm/igcdjIqebXbvf4Cff+Pf0BrBys1i1EOzx9iFXNlAbdrLAR8jf7bkUYkDAr8pEy0q4Pw=="
-  "resolved" "https://registry.npmjs.org/conventional-commits-parser/-/conventional-commits-parser-3.2.3.tgz"
-  "version" "3.2.3"
+  "integrity" "sha512-nK7sAtfi+QXbxHCYfhpZsfRtaitZLIA6889kFIouLvz6repszQDgxBu7wf2WbU+Dco7sAnNCJYERCwt54WPC2Q=="
+  "resolved" "https://registry.npmjs.org/conventional-commits-parser/-/conventional-commits-parser-3.2.4.tgz"
+  "version" "3.2.4"
   dependencies:
     "is-text-path" "^1.0.1"
     "JSONStream" "^1.0.4"
@@ -4816,9 +4816,9 @@
     "assert-plus" "^1.0.0"
 
 "git-raw-commits@^2.0.0":
-  "integrity" "sha512-sHhX5lsbG9SOO6yXdlwgEMQ/ljIn7qMpAbJZCGfXX2fq5T8M5SrDnpYk9/4HswTildcIqatsWa91vty6VhWSaQ=="
-  "resolved" "https://registry.npmjs.org/git-raw-commits/-/git-raw-commits-2.0.10.tgz"
-  "version" "2.0.10"
+  "integrity" "sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A=="
+  "resolved" "https://registry.npmjs.org/git-raw-commits/-/git-raw-commits-2.0.11.tgz"
+  "version" "2.0.11"
   dependencies:
     "dargs" "^7.0.0"
     "lodash" "^4.17.15"
