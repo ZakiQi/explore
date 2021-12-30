@@ -23,10 +23,10 @@ module.exports = {
   },  */
   // override the messages, defaults are as follows
   messages: {
-    type: '选择一种你的提交类型:',
+    type: '提交类型:',
     // scope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替',
     // used if allowCustomScopes is true
-    customScope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替',
+    customScope: '此次提交的影响范围,如数据层、控制层、视图层等,多个可以用 * 代替:\n',
     subject: '短说明:\n',
     body: '长说明，使用"|"换行(可选)：\n',
     breaking: '非兼容性说明 (可选):\n',
