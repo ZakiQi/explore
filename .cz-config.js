@@ -18,7 +18,7 @@
 'use strict'
 module.exports = {
   types: [
-    { value: '✨新增功能', name: '新增功能:    一个新的特性' },
+    { value: '✨新增功能', name: '新增功能:    新增一个新的功能' },
     { value: '🐛修复', name: '修复:    修复一个Bug' },
     { value: '📝文档', name: '文档:    变更的只有文档' },
     { value: '💄格式', name: '格式:    空格, 分号等格式修复' },
