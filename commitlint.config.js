@@ -1,5 +1,5 @@
 module.exports = {
-  extents: ['cz'],
+  extends: ['cz'],
   rules: {
     'body-leading-blank': [1, 'always'],
     'footer-leading-blank': [1, 'always'],
