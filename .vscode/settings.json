@@ -1,28 +1,28 @@
-{
-  "eslint.options": {
-    "extensions": [".js", ".vue", ".ts", ".tsx"]
-  },
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
+// {
+//   "eslint.options": {
+//     "extensions": [".js", ".vue", ".ts", ".tsx"]
+//   },
+//   "editor.formatOnSave": true,
+//   "editor.codeActionsOnSave": {
+//     "source.fixAll.eslint": true,
+//     "source.fixAll.stylelint": true
+//   },
  
-  "eslint.validate": [
-    "vue",
-    "html",
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact"
-  ],
+//   "eslint.validate": [
+//     "vue",
+//     "html",
+//     "javascript",
+//     "typescript",
+//     "javascriptreact",
+//     "typescriptreact"
+//   ],
   
-   // 关闭vscode自带的css,less,scss报错提示
-   "css.validate": false,
-   "less.validate": false,
-   "scss.validate": false,
-   "stylelint.validate": ["vue", "less", "css", "html", "scss", "sass"],
+//    // 关闭vscode自带的css,less,scss报错提示
+//    "css.validate": false,
+//    "less.validate": false,
+//    "scss.validate": false,
+//    "stylelint.validate": ["vue", "less", "css", "html", "scss", "sass"],
 
-    // 默认
-   "vetur.format.defaultFormatter.html": "prettier"
-}
+//     // 默认
+//    "vetur.format.defaultFormatter.html": "prettier"
+// }
